@@ -1,16 +1,12 @@
+#include "scanner_types.h"
+#include "init_scanner.h"
 
+#include <stdio.h>
 
-
-typedef struct {
-    
-} Scanner;
-
-
-
-void parse_args(){
-
-}
 
 int main(int argc,char* argv[]){
-    //TODO: PARSE ARGS
+    Scanner scanner;
+    if (init_scanner(argc,argv,&scanner)){fprintf(stderr,"main: error: failed to intialize scanner\n"); return 1;}
+
+    return 0;
 }
